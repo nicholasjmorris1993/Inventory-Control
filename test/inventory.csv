@@ -1,0 +1,8 @@
+Metric,Value,Unit
+Average Demand,6.461538462,Weekly
+Standard Deviation Of Demand,1.846153846,Weekly
+Lead Time,14,Weekly
+Order Unit Cost,6,Dollars
+Stockout Unit Cost,10,Dollars
+Order Cost,15,Dollars
+Holding Unit Cost,1.8,Dollars
