@@ -1,8 +1,15 @@
-Metric,Value,Unit
-Average Demand,6.461538462,Weekly
-Standard Deviation Of Demand,1.846153846,Weekly
-Lead Time,14,Weekly
-Order Unit Cost,6,Dollars
-Stockout Unit Cost,10,Dollars
-Order Cost,15,Dollars
-Holding Unit Cost,1.8,Dollars
+Product,Metric,Value,Unit
+Apple Pie,Average Demand,6.461538462,Weekly
+Apple Pie,Standard Deviation Of Demand,1.846153846,Weekly
+Apple Pie,Lead Time,14,Weekly
+Apple Pie,Order Unit Cost,6,Dollars
+Apple Pie,Stockout Unit Cost,10,Dollars
+Apple Pie,Order Cost,15,Dollars
+Apple Pie,Holding Unit Cost,1.8,Dollars
+Chocolate Cake,Average Demand,10,Weekly
+Chocolate Cake,Standard Deviation Of Demand,3,Weekly
+Chocolate Cake,Lead Time,9,Weekly
+Chocolate Cake,Order Unit Cost,8,Dollars
+Chocolate Cake,Stockout Unit Cost,12,Dollars
+Chocolate Cake,Order Cost,10,Dollars
+Chocolate Cake,Holding Unit Cost,2,Dollars
