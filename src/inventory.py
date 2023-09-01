@@ -5,9 +5,8 @@ from scipy import stats
 import matplotlib.pyplot as plt
 
 
-Q_MULTIPLIER = 3  # multiplier used in order quantity calculation (generally 2)
 FIG_SIZE = (15, 15)  # size of the plots
-FONT_SIZE = 16  # font size of text in plots
+FONT_SIZE = 20  # font size of text in plots
 
 def qr(df, name="QR Model"):
     model = QR()
@@ -37,7 +36,7 @@ class QR():
         # solve for Q and R until solutions converge
         i = 0
         iterate = True
-        self.order_quantity = np.sqrt(Q_MULTIPLIER * self.order_cost * self.demand * 52 / self.holding_cost)  # initial Q
+        self.order_quantity = np.sqrt(2 * self.order_cost * self.demand * 52 / self.holding_cost)  # initial Q
         while iterate:
             i += 1
 
@@ -49,7 +48,7 @@ class QR():
             # compute Q
             loss_function = stats.norm.pdf(z_score) - z_score * stats.norm.sf(z_score)
             expected_shortage = self.deviation * loss_function
-            order_quantity = np.sqrt(Q_MULTIPLIER * self.demand * 52 * (self.order_cost + self.stockout_cost * expected_shortage) / self.holding_cost)
+            order_quantity = np.sqrt(2 * self.demand * 52 * (self.order_cost + self.stockout_cost * expected_shortage) / self.holding_cost)
 
             # check convergence
             if abs((self.order_quantity - order_quantity) / order_quantity) <= 0.01:
